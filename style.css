@@ -148,20 +148,14 @@ main {
   padding: 1.3rem;
   font-size: 1.2rem;
 }
-.forecast-slide p {
-  flex: 1;
-}
 .forecast-slide p:nth-child(1) {
   color: #1a3c5e;
   font-weight: bold;
 }
-
-.forecast-slide p:nth-child(2) {
-  text-align: left;
-}
-
-.forecast-slide p:nth-child(3) {
-  text-align: right;
+.forecast-slide {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
 }
 .forecast-temperature p:nth-child(1) {
   font-size: 1.5rem;
