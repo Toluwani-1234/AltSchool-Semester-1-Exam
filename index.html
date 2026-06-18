@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <header>
-        <p>icon</p>
+        <p class="weather-icon">icon</p>
         <p>Weather App</p>
       </header>
       <main>
@@ -27,8 +27,10 @@
               </button>
             </div>
 
+            <div id="loading-message"></div>
+
             <div class="hero-content">
-              <p>Icon</p>
+              <p class="display-icon">Icon</p>
               <p class="location">Lagos, Nigeria</p>
               <p class="temperature">32&deg;C</p>
               <div class="temp-description">
@@ -60,6 +62,8 @@
             </div>
           </div>
         </section>
+
+        <div id="error-message"></div>
 
         <section class="forecast">
           <div class="forecast-header">5-DAY FORECAST</div>
@@ -106,5 +110,7 @@
         </section>
       </main>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

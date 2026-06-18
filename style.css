@@ -65,7 +65,6 @@ main {
 .hero-textbox:focus {
   outline: none;
 }
-
 .hero-button {
   flex-shrink: 0;
   padding: 0.7rem 1.5rem;
@@ -74,6 +73,10 @@ main {
   border: none;
   border-radius: 0.8rem;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+.hero-button:hover {
+  background-color: #256b89;
 }
 .hero-content {
   background-color: #2e86ab;
@@ -165,4 +168,26 @@ main {
 }
 .forecast-temperature p:nth-child(2) {
   color: #726d6d;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .hero-footer {
+    padding: 1rem 0.5rem;
+  }
+
+  .forecast-slide {
+    padding: 1rem;
+  }
+
+  .temperature {
+    font-size: 3rem;
+  }
 }
