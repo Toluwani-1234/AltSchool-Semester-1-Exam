@@ -169,6 +169,18 @@ main {
     font-size: 56.25%;
   }
 
+  body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 100%;
+  }
+
   .container {
     padding: 0 0.5rem;
   }
