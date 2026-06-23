@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
+  font-size: 72.5%;
 }
 body {
   font-family:
@@ -103,6 +103,10 @@ main {
   font-size: 1.2rem;
   color: #e2dede;
 }
+.display-icon {
+  font-size: 24px;
+  color: yellow;
+}
 .hero-footer {
   border: 1px solid #cecccc;
   display: flex;
@@ -157,16 +161,131 @@ main {
   grid-template-columns: 1fr 1fr auto;
   align-items: center;
 }
+.forecast-icon {
+  font-size: 24px;
+  color: black;
+}
 .forecast-temperature p:nth-child(1) {
   font-size: 1.5rem;
 }
 .forecast-temperature p:nth-child(2) {
   color: #726d6d;
 }
+/* Styles For the Bonus Features */
+
+.unit-toggle {
+  display: flex;
+  gap: 0.3rem;
+  background-color: #f5f5f5;
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  flex-shrink: 0;
+}
+
+.unit-btn {
+  padding: 0.5rem 0.9rem;
+  border: none;
+  background-color: transparent;
+  color: #8c8686;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.unit-btn:hover {
+  background-color: #e8e8e8;
+  color: #1a3c5e;
+}
+
+.unit-btn.active {
+  background-color: #2e86ab;
+  color: #fff;
+}
+
+.unit-btn.active:hover {
+  background-color: #256b89;
+}
+
+.search-history {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e0e0e0;
+}
+
+.search-history.visible {
+  display: block;
+}
+
+.search-history-title {
+  font-size: 0.95rem;
+  color: #8c8686;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.history-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.history-button {
+  padding: 0.6rem 1rem;
+  background-color: #ecf5f7;
+  border: 1px solid #d0e3e8;
+  border-radius: 0.8rem;
+  color: #1a3c5e;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.history-button:hover {
+  background-color: #2e86ab;
+  color: #fff;
+  border-color: #2e86ab;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(46, 134, 171, 0.2);
+}
+
+.history-button:active {
+  transform: translateY(0);
+}
+
+.display-icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon-animated {
+  animation: weather-bounce 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes weather-bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-8px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 @media (max-width: 480px) {
   html {
-    font-size: 56.25%;
+    font-size: 62.25%;
   }
 
   body {
@@ -174,7 +293,6 @@ main {
 
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .container {
